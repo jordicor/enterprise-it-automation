@@ -1,0 +1,19 @@
+@echo off
+IF EXIST C:\WINDOWS\COMMAND.COM goto win9x
+
+echo  # >> %windir%\SYSTEM32\DRIVERS\ETC\HOSTS.
+echo  # >> %windir%\SYSTEM32\DRIVERS\ETC\LMHOSTS.
+echo 172.28.1.1	I58DV734	i58dv734 >> %windir%\SYSTEM32\DRIVERS\ETC\HOSTS.
+echo 172.28.1.1	I58DV734	i58dv734 >> %windir%\SYSTEM32\DRIVERS\ETC\LMHOSTS.
+goto exit
+
+
+:win9x
+echo  # >> C:\WINDOWS\HOSTS.
+echo  # >> C:\WINDOWS\LMHOSTS.
+echo 172.28.1.1	I58DV734	i58dv734 >> C:\WINDOWS\HOSTS.
+echo 172.28.1.1	I58DV734	i58dv734 >> C:\WINDOWS\LMHOSTS.
+goto exit
+
+
+:exit
